@@ -132,7 +132,7 @@ public class budgetdemo extends AppCompatActivity {
                 showToast("Warning: You have exceeded the total budget");
             } else if(usedAmount<enteredAmount){
                 showToast("Warning: You amount is wrong");
-                }
+            }
             else {
                 saveBudgetToFirestore();
 
@@ -286,18 +286,5 @@ public class budgetdemo extends AppCompatActivity {
         }
         return categoryValues;
     }
-
-
-
-
+    
 }
-
-
-
-
-
-
-
-
-
-

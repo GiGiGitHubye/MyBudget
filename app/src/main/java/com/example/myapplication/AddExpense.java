@@ -117,11 +117,11 @@ public class AddExpense extends AppCompatActivity {
                 .collection("expense")
                 .document(expenseModel.getExpenseID())
                 .delete()
-                        .addOnSuccessListener(aVoid->{
-                            updateTotalExpensesAndUI();
-                            updateRemainingBudget();
-                            finish();
-                        });
+                .addOnSuccessListener(aVoid->{
+                    updateTotalExpensesAndUI();
+                    updateRemainingBudget();
+                    finish();
+                });
 
     }
 
