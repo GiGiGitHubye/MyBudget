@@ -150,7 +150,80 @@ public class Setting extends AppCompatActivity {
 
         alertDialog.show();
     }
-    
+    private void deleteDataForName(String name) {
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+
+        // Delete from "expense" collection
+        db.collection("expense")
+                .whereEqualTo("username", name)
+                .get()
+                .addOnSuccessListener(queryDocumentSnapshots -> {
+                    for (DocumentSnapshot documentSnapshot : queryDocumentSnapshots.getDocuments()) {
+                        db.collection("expense").document(documentSnapshot.getId()).delete();
+                    }
+                });
+        db.collection("budgets")
+                .whereEqualTo("username", name)
+                .get()
+                .addOnSuccessListener(queryDocumentSnapshots -> {
+                    for (DocumentSnapshot documentSnapshot : queryDocumentSnapshots.getDocuments()) {
+                        db.collection("budgets").document(documentSnapshot.getId()).delete();
+                    }
+                });
+        db.collection("Total expenses")
+                .whereEqualTo("username", name)
+                .get()
+                .addOnSuccessListener(queryDocumentSnapshots -> {
+                    for (DocumentSnapshot documentSnapshot : queryDocumentSnapshots.getDocuments()) {
+                        db.collection("Total expenses").document(documentSnapshot.getId()).delete();
+                    }
+                });
+        db.collection("users")
+                .whereEqualTo("name", name)
+                .get()
+                .addOnSuccessListener(queryDocumentSnapshots -> {
+                    for (DocumentSnapshot documentSnapshot : queryDocumentSnapshots.getDocuments()) {
+                        db.collection("users").document(documentSnapshot.getId()).delete();
+                    }
+                });
+        db.collection("facebook")
+                .whereEqualTo("name", name)
+                .get()
+                .addOnSuccessListener(queryDocumentSnapshots -> {
+                    for (DocumentSnapshot documentSnapshot : queryDocumentSnapshots.getDocuments()) {
+                        db.collection("facebook").document(documentSnapshot.getId()).delete();
+                    }
+                });
+        db.collection("google")
+                .whereEqualTo("name", name)
+                .get()
+                .addOnSuccessListener(queryDocumentSnapshots -> {
+                    for (DocumentSnapshot documentSnapshot : queryDocumentSnapshots.getDocuments()) {
+                        db.collection("google").document(documentSnapshot.getId()).delete();
+                    }
+                });
+        db.collection("totalsaved")
+                .whereEqualTo("name", name)
+                .get()
+                .addOnSuccessListener(queryDocumentSnapshots -> {
+                    for (DocumentSnapshot documentSnapshot : queryDocumentSnapshots.getDocuments()) {
+                        db.collection("totalsaved").document(documentSnapshot.getId()).delete();
+                    }
+                });
+        db.collection("feedback")
+                .whereEqualTo("username", name)
+                .get()
+                .addOnSuccessListener(queryDocumentSnapshots -> {
+                    for (DocumentSnapshot documentSnapshot : queryDocumentSnapshots.getDocuments()) {
+                        db.collection("feedback").document(documentSnapshot.getId()).delete();
+                    }
+                });
+        database2.removesharepreference(Setting.this);
+        Intent intent=new Intent(Setting.this,Login.class);
+        startActivity(intent);
+
+
+    }
 
 
     //--------AboutUsDialog-------------
