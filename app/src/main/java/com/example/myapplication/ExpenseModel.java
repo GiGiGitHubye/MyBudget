@@ -25,8 +25,9 @@ public class ExpenseModel implements Serializable {
         this.amount = amount;
     }
 
-    public ExpenseModel(double amount, String time, String note) {
+    public ExpenseModel(double amount, String time, String note, String category) {
         this.note = note;
+        this.category=category;
         this.time = time;
         this.amount = amount;
     }

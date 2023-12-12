@@ -157,8 +157,9 @@ public class Home extends AppCompatActivity implements OnItemsClick{
                             double amount = documentSnapshot.getDouble("amount");
                             String time = documentSnapshot.getString("time");
                             String note = documentSnapshot.getString("note");
+                            String catagory = documentSnapshot.getString("category");
 
-                            ExpenseModel expenseModel = new ExpenseModel(amount, time, note);
+                            ExpenseModel expenseModel = new ExpenseModel(amount, time, note,category);
 
                             expensesAdapter.add(expenseModel);
                         }
