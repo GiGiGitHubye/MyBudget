@@ -141,10 +141,8 @@ public class Home extends AppCompatActivity implements OnItemsClick{
 
 
     private void getData() {
-        // Step 1: Get the username from SharedPreferences
         String username = getSharedPreferences("MyPrefs", MODE_PRIVATE).getString("userName", "");
 
-        // Step 2: Query expenses based on the username
         FirebaseFirestore
                 .getInstance()
                 .collection("expense")
@@ -153,16 +151,23 @@ public class Home extends AppCompatActivity implements OnItemsClick{
                 .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
                     @Override
                     public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
-                        // Process the query results and update the adapter
                         expensesAdapter.clear();
                         List<DocumentSnapshot> dsList = queryDocumentSnapshots.getDocuments();
                         for (DocumentSnapshot documentSnapshot : dsList) {
-                            ExpenseModel expenseModel = documentSnapshot.toObject(ExpenseModel.class);
+                            double amount = documentSnapshot.getDouble("amount");
+                            String time = documentSnapshot.getString("time");
+                            String note = documentSnapshot.getString("note");
+
+                            ExpenseModel expenseModel = new ExpenseModel(amount, time, note);
+
                             expensesAdapter.add(expenseModel);
                         }
+
+                        expensesAdapter.notifyDataSetChanged();
                     }
                 });
     }
+
 
 
     @Override
