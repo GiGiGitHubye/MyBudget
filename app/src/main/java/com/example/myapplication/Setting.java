@@ -279,25 +279,7 @@ public class Setting extends AppCompatActivity {
     }
 
 
-    private void saveFeedback(String username, String comment) {
-        FirebaseFirestore db = FirebaseFirestore.getInstance();
-
-        // Create a new feedback document with an auto-generated ID
-        Map<String, Object> feedbackData = new HashMap<>();
-        feedbackData.put("username", username);
-        feedbackData.put("comment", comment);
-
-        db.collection("feedback")
-                .add(feedbackData)
-                .addOnSuccessListener(documentReference -> {
-                    // Successfully added feedback
-                    Toast.makeText(this, "Feedback submitted successfully", Toast.LENGTH_SHORT).show();
-                })
-                .addOnFailureListener(e -> {
-                    // Handle failure to add feedback
-                    Toast.makeText(this, "Failed to submit feedback: " + e.getMessage(), Toast.LENGTH_SHORT).show();
-                });
-    }
+    
     private void showToast(String message) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
