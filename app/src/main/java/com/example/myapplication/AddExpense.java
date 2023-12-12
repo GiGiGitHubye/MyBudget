@@ -92,7 +92,6 @@ public class AddExpense extends AppCompatActivity {
 
     }
 
-
     private void showCategoryListDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Select Category");
