@@ -175,63 +175,7 @@ public class Home extends AppCompatActivity implements OnItemsClick{
     }
 
 
-    private void updateTotalRemaining() {
-        FirebaseFirestore db = FirebaseFirestore.getInstance();
-        String username = getSharedPreferences("MyPrefs", MODE_PRIVATE).getString("userName", "");
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM", Locale.getDefault());
-        String yearMonth = sdf.format(new Date());
-
-        // Step 1: Retrieve total expenses from the "Total expenses" collection
-        db.collection("Total expenses")
-                .document(username + "_" + yearMonth)
-                .get()
-                .addOnSuccessListener(documentSnapshot -> {
-                    if (documentSnapshot.exists()) {
-                        long totalExpenses = documentSnapshot.getLong("totalExpenses");
-
-                        // Step 2: Retrieve total budget from the "budgets" collection
-                        db.collection("budgets")
-                                .document(username + "_" + yearMonth)
-                                .get()
-                                .addOnSuccessListener(budgetDocument -> {
-                                    if (budgetDocument.exists()) {
-                                        long totalBudget = budgetDocument.getLong("totalBudget");
-
-                                        // Step 3: Calculate remaining budget
-                                        long remainingBudget = totalBudget - totalExpenses;
-
-                                        // Step 4: Save remaining budget in the "totalsaved" collection
-                                        saveRemainingBudget(username, yearMonth, remainingBudget);
-
-                                        // Step 5: Update totalRemainTextView
-                                        TextView totalRemainTextView = binding.totalremain;
-                                        totalRemainTextView.setText(String.valueOf(remainingBudget));
-                                    } else {
-                                        showToast("Budget document does not exist");
-                                    }
-                                })
-                                .addOnFailureListener(e -> showToast("Failed to retrieve total budget: " + e.getMessage()));
-                    } else {
-                        showToast("Total expenses document does not exist");
-                    }
-                })
-                .addOnFailureListener(e -> showToast("Failed to retrieve total expenses: " + e.getMessage()));
-    }
-
-
-    private void saveRemainingBudget(String username, String yearMonth, long remainingBudget) {
-        FirebaseFirestore db = FirebaseFirestore.getInstance();
-
-        // Step 5: Save remaining budget in the "totalsaved" collection
-        Map<String, Object> dataToSave = new HashMap<>();
-        dataToSave.put("remainingBudget", remainingBudget);
-        dataToSave.put("name", username);
-
-        db.collection("totalsaved")
-                .document(username + "_" + yearMonth)
-                .set(dataToSave, SetOptions.merge());
-
-    }
+  
 
 
     @Override
