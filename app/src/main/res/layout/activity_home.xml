@@ -27,9 +27,11 @@
             android:id="@+id/recycler"
             android:layout_width="298dp"
             android:layout_height="352dp"
-            android:layout_marginTop="24dp"
-            app:layout_constraintTop_toBottomOf="@+id/totalremain"
-            tools:layout_editor_absoluteX="56dp" />
+            android:layout_marginTop="28dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/totalremain" />
 
         <TextView
             android:id="@+id/addExpense"
@@ -60,23 +62,38 @@
             android:fontFamily="@font/indie_flower"
             android:gravity="center"
             android:text="Total budget remaining"
-            android:textStyle="bold"
             android:textSize="24sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
+            android:id="@+id/RM_Remain"
+            android:layout_width="50dp"
+            android:layout_height="43dp"
+            android:layout_marginTop="8dp"
+            android:foregroundGravity="center_horizontal"
+            android:gravity="center"
+            android:text="RM"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.373"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+        <TextView
             android:id="@+id/totalremain"
             android:layout_width="206dp"
             android:layout_height="43dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="8dp"
             android:foregroundGravity="center_horizontal"
             android:gravity="center"
             android:textSize="25sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintHorizontal_bias="0.585"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView3" />
     </androidx.constraintlayout.widget.ConstraintLayout>
