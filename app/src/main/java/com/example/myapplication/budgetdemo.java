@@ -254,37 +254,6 @@ public class budgetdemo extends AppCompatActivity {
         return usedAmount;
     }
 
-    private void saveBudgetToFirestore() {
-        SharedPreferences prefs = getSharedPreferences("MyPrefs", MODE_PRIVATE);
-        String username =prefs.getString("userName","");
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM", Locale.getDefault());
-        String yearMonth = sdf.format(new Date());
-        String documentId = username + "_" + yearMonth;
-
-        int totalBudget = getEnteredAmount();
-        Map<String, Integer> categoryValues = getCategoryValues();
-        int remainingBudget = totalBudget - calculateUsedAmount();
-
-        Budget budget = new Budget(username,totalBudget, categoryValues, yearMonth);
-
-        FirebaseFirestore db = FirebaseFirestore.getInstance();
-        db.collection("budgets")
-                .document(documentId)
-                .set(budget)
-                .addOnSuccessListener(aVoid -> showToast("Budget saved successfully"))
-                .addOnFailureListener(e -> showToast("Failed to save budget: " + e.getMessage()));
-    }
-
-    private Map<String, Integer> getCategoryValues() {
-        Map<String, Integer> categoryValues = new HashMap<>();
-        for (int i = 0; i < categories_list.getChildCount(); i++) {
-            View categoryView = categories_list.getChildAt(i);
-            String categoryName = categoryNamesList.get(i); // Get the category name from the list
-            EditText amountET = categoryView.findViewById(R.id.icon_amountET);
-            int amount = amountET.getText().toString().isEmpty() ? 0 : Integer.parseInt(amountET.getText().toString());
-            categoryValues.put(categoryName, amount);
-        }
-        return categoryValues;
-    }
+   
 
 }
