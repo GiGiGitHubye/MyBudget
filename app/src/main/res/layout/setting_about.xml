@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_4"
+        android:orientation="vertical"
+        android:padding="16dp"
+        tools:ignore="All">
+
+        <!-- First set -->
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Crazy Diamond"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingTop="18dp">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="112dp"
+                android:layout_height="103dp"
+                android:layout_gravity="center_horizontal"
+                app:srcCompat="@drawable/chiheang" />
+
+            <TextView
+                android:id="@+id/editTextTextMultiLine2"
+                android:layout_width="265dp"
+                android:layout_height="175dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:gravity="start|top"
+                android:inputType="textMultiLine"
+                android:text="@string/WongChiHeang"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- Second set -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingTop="18dp">
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="112dp"
+                android:layout_height="103dp"
+                android:layout_gravity="center_horizontal"
+                app:srcCompat="@drawable/ng" />
+
+            <TextView
+                android:id="@+id/editTextTextMultiLine3"
+                android:layout_width="265dp"
+                android:layout_height="175dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:gravity="start|top"
+                android:inputType="textMultiLine"
+                android:text="@string/NgZhenHong"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- Third set -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingTop="18dp">
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="112dp"
+                android:layout_height="103dp"
+                android:layout_gravity="center_horizontal"
+                app:srcCompat="@drawable/songwang" />
+
+            <TextView
+                android:id="@+id/editTextTextMultiLine4"
+                android:layout_width="265dp"
+                android:layout_height="175dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:gravity="start|top"
+                android:inputType="textMultiLine"
+                android:text="@string/WongSongWang"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

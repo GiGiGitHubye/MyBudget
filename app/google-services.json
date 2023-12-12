@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "803533132701",
+    "project_id": "ceremonial-orb-407106",
+    "storage_bucket": "ceremonial-orb-407106.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:803533132701:android:fef3a6fa4e00efc0a45574",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnanol88RqSQDiaZPTCt-jju8eoKpiB3Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

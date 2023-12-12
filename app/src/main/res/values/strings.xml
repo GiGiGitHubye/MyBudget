@@ -1,0 +1,72 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="title">My Wallet</string>
+    <string name="subtitle">You Deserve To Have</string>
+    <string name="nav_open">Open</string>
+    <string name="nav_close">Close</string>
+    <string name="default_web_client_id" translatable="false">803533132701-13p8hvrbqe027jrn1hc6selg26c102bq.apps.googleusercontent.com</string>
+
+    <string name="facebook_app_id">366887475730182</string>
+    <string name="fb_login_protocol_scheme">fb366887475730182</string>
+    <string name="facebook_client_token">5e64c69762b2bc79eb9be874d8578ca8</string>
+    <string-array name="icon_array">
+        <item>Student Bill</item>
+        <item>Collision</item>
+        <item>Food</item>
+        <item>Electricity</item>
+        <item>Water</item>
+        <item>Entertainment</item>
+        <item>Grocery</item>
+        <item>Injure</item>
+        <item>Learning</item>
+        <item>Pet</item>
+        <item>Sport</item>
+        <item>Transportation</item>
+        <item>Girlfriend</item>
+        <item>Other</item>
+    </string-array>
+    <string name="default_category_name">Default Category</string>
+    <string name="other">Other</string>
+    <string name="WongChiHeang">
+        \n Name: Wong Chi Heang\n
+        StudentID: 22ACB02006\n
+        Faculty: FICT\n
+        Program: CS\n
+        Position: Leader\n
+        PhoneNum: +60 12-668 8232\n
+        CallSign: Boss\n
+        PersonalSign: Suffer as I have !!!
+    </string>
+
+    <string name="WongSongWang">
+        \n Name: Wong Song Wang\n
+        StudentID: 22ACB02997\n
+        Faculty: FICT\n
+        Program: CS\n
+        Position: Operator\n
+        PhoneNum: +60 12-877 2675\n
+        CallSign: IceMan\n
+        PersonalSign: Catch me if you can.
+    </string>
+
+    <string name="NgZhenHong">
+        \n Name: Ng Zhen Hong\n
+        StudentID: 20ACB5788\n
+        Faculty: FICT\n
+        Program: CS\n
+        Position: Operator\n
+        PhoneNum: +60 19-727 4373\n
+        CallSign: Wizard\n
+        PersonalSign: Come get me.
+    </string>
+
+    <string name="title1">Welcome!!</string>
+    <string name="title2">What I can Do?</string>
+    <string name="title3">Lets Begin!</string>
+    <string name="subtitle1">Hi! My name is My Budget and I come for help you to manage
+        your expense, so please feel free to perform me.</string>
+    <string name="subtitle2">I can do a lot of things, like I can record expense,
+        generate report, interact with u</string>
+    <string name="subtitle3">TryMe!!</string>
+
+</resources>
