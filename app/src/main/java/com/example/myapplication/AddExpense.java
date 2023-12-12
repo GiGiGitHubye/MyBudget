@@ -91,7 +91,21 @@ public class AddExpense extends AppCompatActivity {
         });
 
     }
-    
+
+    private void showCategoryListDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Select Category");
+
+        String[] categories = categoryList.toArray(new String[0]);
+
+        builder.setItems(categories, (dialog, which) -> {
+            String selectedCategory = categoryList.get(which);
+            binding.category.setText(selectedCategory);
+            dialog.dismiss();
+        });
+
+        builder.show();
+    }
 
     private void deleteExpense() {
         if (expenseModel == null || expenseModel.getExpenseID() == null) {
