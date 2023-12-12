@@ -96,6 +96,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView7"
         app:passwordToggleEnabled="true">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="381dp"
+            android:layout_height="66dp"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:textColor="#000000" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -112,6 +118,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6"
         app:passwordToggleEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="381dp"
+            android:layout_height="66dp"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:textColor="#000000" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
