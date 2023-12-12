@@ -109,7 +109,7 @@ public class Login extends AppCompatActivity implements database.AuthenticationC
             Task<GoogleSignInAccount> task=GoogleSignIn.getSignedInAccountFromIntent(data);
             try{
                 GoogleSignInAccount account=task.getResult(ApiException.class);
-             db.Auth(account.getIdToken(),Login.this,Login.this);
+                db.Auth(account.getIdToken(),Login.this,Login.this);
             }
             catch(Exception e) {
                 throw new RuntimeException(e);
