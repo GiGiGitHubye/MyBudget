@@ -33,7 +33,7 @@ public class slider_activity extends AppCompatActivity {
         viewPager.setAdapter(adapter);
 
         next_main.setOnClickListener(v -> {
-            Intent intent = new Intent(slider_activity.this, Home.class);
+            Intent intent = new Intent(slider_activity.this, Login.class);
             startActivity(intent);
             finish();
         });

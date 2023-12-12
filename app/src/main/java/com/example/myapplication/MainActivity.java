@@ -26,35 +26,35 @@ public class MainActivity extends AppCompatActivity {
         background = findViewById(R.id.ribbons);
 
         splashImg.animate()
-                .scaleX(1.5f) // Scale to 0 in the X direction
-                .scaleY(1.5f) // Scale to 0 in the Y direction
-                .alpha(0.0f)  // Set alpha to 0 for disappearance
-                .setDuration(1000) // Animation duration in milliseconds
-                .setStartDelay(2000) // Delay before starting the animation
+                .scaleX(1.5f)
+                .scaleY(1.5f)
+                .alpha(0.0f)
+                .setDuration(1000)
+                .setStartDelay(2000)
                 .start();
 
         title1.animate()
-                .scaleX(1.5f) // Scale to 0 in the X direction
-                .scaleY(1.5f) // Scale to 0 in the Y direction
-                .alpha(0.0f)  // Set alpha to 0 for disappearance
-                .setDuration(1000) // Animation duration in milliseconds
-                .setStartDelay(2000) // Delay before starting the animation
+                .scaleX(1.5f)
+                .scaleY(1.5f)
+                .alpha(0.0f)
+                .setDuration(1000)
+                .setStartDelay(2000)
                 .start();
 
         title2.animate()
-                .scaleX(1.5f) // Scale to 0 in the X direction
-                .scaleY(1.5f) // Scale to 0 in the Y direction
-                .alpha(0.0f)  // Set alpha to 0 for disappearance
-                .setDuration(1000) // Animation duration in milliseconds
-                .setStartDelay(2000) // Delay before starting the animation
+                .scaleX(1.5f)
+                .scaleY(1.5f)
+                .alpha(0.0f)
+                .setDuration(1000)
+                .setStartDelay(2000)
                 .start();
 
         background.animate()
-                .scaleX(0.0f) // Scale to 0 in the X direction
-                .scaleY(0.0f) // Scale to 0 in the Y direction
-                .alpha(0.0f)  // Set alpha to 0 for disappearance
-                .setDuration(1000) // Animation duration in milliseconds
-                .setStartDelay(2000) // Delay before starting the animation
+                .scaleX(0.0f)
+                .scaleY(0.0f)
+                .alpha(0.0f)
+                .setDuration(1000)
+                .setStartDelay(2000)
                 .setListener(new Animator.AnimatorListener() {
                     @Override
                     public void onAnimationStart(@NonNull Animator animation) {
