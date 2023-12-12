@@ -61,30 +61,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/currentname" />
 
-        <TextView
-            android:id="@+id/textView9"
-            android:layout_width="175dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="340dp"
-            android:layout_marginEnd="204dp"
-            android:layout_marginBottom="361dp"
-            android:text="Total Saved"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/textView10"
-            android:layout_width="341dp"
-            android:layout_height="45dp"
-            android:layout_marginTop="8dp"
-            android:textSize="20sp"
-            app:layout_constraintTop_toBottomOf="@+id/textView9"
-            tools:layout_editor_absoluteX="32dp" />
-
         <Button
             android:id="@+id/logout"
             android:layout_width="match_parent"
